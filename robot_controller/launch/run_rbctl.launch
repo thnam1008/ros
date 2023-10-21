@@ -1,0 +1,7 @@
+<launch>
+    <node name="rb_ctl" pkg="robot_controller" type="rb_ctl" output="screen">
+    </node>
+
+    <node name="robot_simulationPy" pkg="robot_simulation" type="robot_simulation.py" output="screen">
+    </node>
+</launch>

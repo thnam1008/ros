@@ -1,0 +1,9 @@
+<launch>
+    <param name="a" type="double" value="1.0">
+    </param>
+    <param name="a" type="double" value="3.0">
+    </param>
+
+    <node name="client_cpp" pkg="robot_controller" type="client_cpp" output="screen">
+    </node>
+</launch>

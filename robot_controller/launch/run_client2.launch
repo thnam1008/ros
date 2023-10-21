@@ -1,0 +1,4 @@
+<launch>
+    <node name="clientPy" pkg="robot_simulation" type="client.py" output="screen">
+    </node>
+</launch>

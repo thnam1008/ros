@@ -1,0 +1,10 @@
+# Goal
+geometry_msgs/Pose2D target_pose
+---
+# Result
+bool success
+float32 distance_error
+float32 angle_error
+---
+# Feedback
+float32 percentage

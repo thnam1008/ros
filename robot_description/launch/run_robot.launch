@@ -1,0 +1,14 @@
+<launch>
+
+ <!-- <param name="robot_description" textfile="$(find robot_description)/urdf/robot.urdf" /> -->
+    <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find robot_description)/urdf/m2wr.xacro'" />
+
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_node" >
+    </node>
+
+    <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_node" >
+    </node>
+
+    <include file="$(find robot_simulation)/launch/run_gazebo.launch" />
+
+</launch>

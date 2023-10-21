@@ -1,0 +1,4 @@
+<launch>
+    <node name="action_client_cpp" pkg="robot_controller" type="action_client" output="screen">
+    </node>
+</launch>

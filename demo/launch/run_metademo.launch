@@ -1,0 +1,4 @@
+<launch>
+    <include file="$(find demo)/launch/run_demo.launch">
+    </include>
+</launch>

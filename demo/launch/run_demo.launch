@@ -1,0 +1,11 @@
+<launch>
+    <rosparam command="load" file="$(find demo)/config/param.yaml">
+    </rosparam>
+    <param name="m/c" type="bool" value="true"></param>
+
+    <node name="demo_node" pkg="demo" type="demo.py" output="screen">
+    </node>
+    
+    <node name="demo_node_2" pkg="demo" type="demo.py" output="screen" > 
+    </node>
+</launch>

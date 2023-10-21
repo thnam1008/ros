@@ -1,0 +1,9 @@
+global_frame: map
+rolling_window: false
+
+#Freespace
+track_unknown_space: false #true or false đều được nhưng nên để là false
+
+plugins:
+ - {name: static,                  type: "costmap_2d::StaticLayer"}
+ - {name: inflation,               type: "costmap_2d::InflationLayer"}

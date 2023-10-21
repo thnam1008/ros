@@ -1,0 +1,19 @@
+<launch>
+
+<arg name="map_file" default="$(find robot_slam)/map/map.yaml"/>
+
+  <!-- Run the map server -->
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+
+<!-- AMCL -->
+    <node pkg="amcl" type="amcl" name="amcl" output="log">
+        <remap from="scan" to="/m2wr/laser/scan" />
+
+        <param name="initial_pose_x" value="0"/>
+        <param name="initial_pose_y" value="0"/>
+        <param name="initial_pose_a" value="0"/>
+
+        <rosparam command="load" file="$(find robot_slam)/config/amcl.yaml" />
+    </node>
+
+</launch>
